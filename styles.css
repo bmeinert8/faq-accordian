@@ -109,6 +109,7 @@ html {
 /* Ensure body takes up at least full viewport height */
 body {
   min-height: 100vh;
+  background-color: var(--Purple100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,23 +121,66 @@ body {
 
 .text-preset-1 {
   font-family: var(--Text-Font);
-  font-size: 56px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 66px;
   letter-spacing: var(--Letter-Spacing);
+  color: var(--Purple950);
 }
 
 .text-preset-2 {
   font-family: var(--Text-Font);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 21px;
   letter-spacing: var(--Letter-Spacing);
+  color: var(--Purple950);
 }
 .text-preset-3 {
   font-family: var(--Text-Font);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: var(--Letter-Spacing);
+  color: var(--Purple600);
+}
+
+/********************************/
+/*         General Syling       */
+/********************************/
+
+.main-container,
+.header-section,
+.faq-list,
+.question-container {
+  display: flex;
+}
+
+.main-container,
+.faq-list,
+.faq-item {
+  flex-direction: column;
+  gap: var(--Spacing-24px);
+}
+
+.main-container {
+  padding: var(--Spacing-24px);
+  background-color: var(--White);
+  border-radius: 8px;
+  width: 327px;
+}
+
+.header-section,
+.question-container {
+  gap: var(--Spacing-24px);
+  align-items: center;
+}
+
+.star-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.divider {
+  border: 1px solid var(--Purple100);
 }
