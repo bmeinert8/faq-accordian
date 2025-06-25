@@ -60,17 +60,6 @@ a {
   color: inherit;
 }
 
-/* Reset buttons to avoid inconsistent styling */
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  border: none;
-  background: none;
-  appearance: none;
-}
-
 /* Ensure form elements don't overflow */
 input,
 textarea {
@@ -152,13 +141,13 @@ body {
 .main-container,
 .header-section,
 .faq-list,
-.question-container {
+.question-container,
+.faq-item {
   display: flex;
 }
 
 .main-container,
-.faq-list,
-.faq-item {
+.faq-list {
   flex-direction: column;
   gap: var(--Spacing-24px);
 }
@@ -181,6 +170,32 @@ body {
   width: 24px;
 }
 
+.faq-item {
+  flex-direction: column;
+}
 .divider {
   border: 1px solid var(--Purple100);
+}
+
+.accordion-button {
+  min-width: 33px;
+  height: 31px;
+  border: none;
+  background: none;
+}
+
+.accordion-button:hover {
+  cursor: pointer;
+}
+
+.answer-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.answer-text-active {
+  padding-top: var(--Spacing-24px);
+  max-height: 500px;
+  transition: max-height 0.8s ease-in-out;
 }
