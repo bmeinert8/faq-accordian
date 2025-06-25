@@ -15,11 +15,7 @@
   <body>
     <main class="main-container">
       <section class="header-section">
-        <img
-          src="./images/icon-star.svg"
-          alt="violet colored 4 pointed star icon"
-          class="star-icon"
-        />
+        <img src="./images/icon-star.svg" alt="" class="star-icon" />
         <h1 class="text-preset-1 header-text">FAQs</h1>
       </section>
       <section class="faq-list">
@@ -28,11 +24,19 @@
             <h2 class="text-preset-2">
               What is Frontend Mentor, and how will it help me?
             </h2>
-            <button class="accordion-button js-accordion">
-              <img src="./images/icon-minus.svg" alt="dark purple minus icon" />
+            <button
+              class="accordion-button js-accordion"
+              aria-expanded="true"
+              aria-controls="answer-1"
+            >
+              <img src="./images/icon-minus.svg" alt="" aria-hidden="false" />
             </button>
           </div>
-          <p class="answer-text text-preset-3 answer-text-active js-answer-text">
+          <p
+            class="answer-text text-preset-3 answer-text-active js-answer-text"
+            id="answer-1"
+            aria-hidden="false"
+          >
             Frontend Mentor offers realistic coding challenges to help
             developers improve their frontend coding skills with projects in
             HTML, CSS, and JavaScript. It's suitable for all levels and ideal
@@ -42,11 +46,15 @@
         <hr class="divider" />
         <article class="question-container">
           <div class="question-container">
-            <h2 class="text-preset-2">
-              What is Frontend Mentor, and how will it help me?
+            <h2 class="text-preset-2 question-container">
+              Is Frontend Mentor free?
             </h2>
-            <button class="accordion-button">
-              <img src="./images/icon-plus.svg" alt="bright purple plus icon" />
+            <button
+              class="accordion-button"
+              aria-expanded="false"
+              aria-controls="answer-1"
+            >
+              <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
         </article>
@@ -54,13 +62,14 @@
         <article class="question-container">
           <div class="question-container">
             <h2 class="text-preset-2">
-              What is Frontend Mentor, and how will it help me?
+              Can I use Frontend Mentor projects in my portfolio?
             </h2>
-            <button class="accordion-button">
-              <img
-                src="./images/icon-plus.svg"
-                alt="bright purple purple icon"
-              />
+            <button
+              class="accordion-button"
+              aria-expanded="false"
+              aria-controls="answer-1"
+            >
+              <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
         </article>
@@ -68,10 +77,14 @@
         <article class="question-container">
           <div class="question-container">
             <h2 class="text-preset-2">
-              What is Frontend Mentor, and how will it help me?
+              How can I get help if I'm stuck on a challenge?
             </h2>
-            <button class="accordion-button">
-              <img src="./images/icon-plus.svg" alt="bright purple plus icon" />
+            <button
+              class="accordion-button"
+              aria-expanded="false"
+              aria-controls="answer-1"
+            >
+              <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
         </article>

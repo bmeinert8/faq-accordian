@@ -177,6 +177,10 @@ body {
   border: 1px solid var(--Purple100);
 }
 
+.question-container {
+  width: 275px;
+}
+
 .accordion-button {
   min-width: 33px;
   height: 31px;
@@ -188,6 +192,11 @@ body {
   cursor: pointer;
 }
 
+.accordion-button:focus-visible {
+  outline: 2px solid var(--Violet600);
+  outline-offset: 2px;
+}
+
 .answer-text {
   max-height: 0;
   overflow: hidden;
@@ -197,5 +206,9 @@ body {
 .answer-text-active {
   padding-top: var(--Spacing-24px);
   max-height: 500px;
-  transition: max-height 0.8s ease-in-out;
 }
+
+
+/********************************/
+/*         Media Queries        */
+/********************************/

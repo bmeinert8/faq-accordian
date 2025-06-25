@@ -1,14 +1,19 @@
-const accordionBtn = document.querySelector('.js-accordion');
+const accordionButtons = document.querySelectorAll('.accordion-button');
 
-accordionBtn.addEventListener('click', () => {
-  const img = accordionBtn.querySelector('img');
-  const answerDisplay = document.querySelector('.js-answer-text');
-  answerDisplay.classList.toggle('answer-text-active');
-  if (img.src.includes('icon-minus.svg')) {
-    img.src = './images/icon-plus.svg';
-    img.alt = 'bright purple plus icon';
-  } else {
-    img.src = './images/icon-minus.svg';
-    img.alt = 'dark purple minus icon';
-  }
+accordionButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    const newExpanded = !isExpanded;
+    button.setAttribute('aria-expanded', newExpanded.toString());
+
+    const answerId = button.getAttribute('aria-controls');
+    const answer = document.getElementById(answerId);
+    answer.classList.toggle('answer-text-active', newExpanded);
+    answer.setAttribute('aria-hidden', (!newExpanded).toString());
+
+    const img = button.querySelector('img');
+    img.src = newExpanded
+      ? './images/icon-minus.svg'
+      : './images/icon-plus.svg';
+  });
 });
