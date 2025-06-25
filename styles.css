@@ -138,6 +138,17 @@ body {
 /*         General Syling       */
 /********************************/
 
+.header-image {
+  width: 100%;
+  height: 232px;
+  position: absolute;
+  background-image: url(./images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1000;
+  top: 0px;
+}
+
 .main-container,
 .header-section,
 .faq-list,
@@ -181,6 +192,10 @@ body {
   width: 275px;
 }
 
+.text-preset-2:focus-visible {
+  color: var(--Violet600);
+}
+
 .accordion-button {
   min-width: 33px;
   height: 31px;
@@ -208,7 +223,41 @@ body {
   max-height: 500px;
 }
 
-
 /********************************/
 /*         Media Queries        */
 /********************************/
+
+@media (min-width: 48rem) {
+  .header-image {
+    background-image: url(./images/background-pattern-desktop.svg);
+    height: 320px;
+  }
+
+  .main-container {
+    padding: var(--Spacing-40px);
+    width: 600px;
+    border-radius: 16px;
+  }
+
+  .star-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .question-container {
+    width: 525px;
+    justify-content: space-between;
+  }
+
+  .text-preset-1 {
+    font-size: 56px;
+  }
+
+  .text-preset-2 {
+    font-size: 18px;
+  }
+
+  .text-preset-3 {
+    font-size: 16px;
+  }
+}

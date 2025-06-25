@@ -13,15 +13,16 @@
     />
   </head>
   <body>
+    <header class="header-image"></header>
     <main class="main-container">
       <section class="header-section">
         <img src="./images/icon-star.svg" alt="" class="star-icon" />
         <h1 class="text-preset-1 header-text">FAQs</h1>
       </section>
-      <section class="faq-list">
-        <article class="faq-item">
+      <ul class="faq-list">
+        <li class="faq-item">
           <div class="question-container">
-            <h2 class="text-preset-2">
+            <h2 class="text-preset-2" tabindex="0">
               What is Frontend Mentor, and how will it help me?
             </h2>
             <button
@@ -42,11 +43,11 @@
             HTML, CSS, and JavaScript. It's suitable for all levels and ideal
             for portfolio building.
           </p>
-        </article>
+        </li>
         <hr class="divider" />
-        <article class="question-container">
+        <li class="faq-item">
           <div class="question-container">
-            <h2 class="text-preset-2 question-container">
+            <h2 class="text-preset-2 question-container" tabindex="0">
               Is Frontend Mentor free?
             </h2>
             <button
@@ -57,11 +58,11 @@
               <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
-        </article>
+        </li>
         <hr class="divider" />
-        <article class="question-container">
+        <li class="faq-item">
           <div class="question-container">
-            <h2 class="text-preset-2">
+            <h2 class="text-preset-2" tabindex="0">
               Can I use Frontend Mentor projects in my portfolio?
             </h2>
             <button
@@ -72,11 +73,11 @@
               <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
-        </article>
+        </li>
         <hr class="divider" />
-        <article class="question-container">
+        <li class="faq-item">
           <div class="question-container">
-            <h2 class="text-preset-2">
+            <h2 class="text-preset-2" tabindex="0">
               How can I get help if I'm stuck on a challenge?
             </h2>
             <button
@@ -87,8 +88,8 @@
               <img src="./images/icon-plus.svg" alt="" aria-hidden="true" />
             </button>
           </div>
-        </article>
-      </section>
+        </li>
+      </ul>
     </main>
     <script src="index.js" defer></script>
   </body>
